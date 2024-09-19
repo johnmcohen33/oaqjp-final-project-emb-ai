@@ -11,7 +11,8 @@ def emotion_detector(text_to_analyse):
     # Check the status code and return the result
     if response.status_code == 200:
         return response.json()  # Return the JSON response
-    else:
-        return f"Error: {response.status_code} - {response.text}"
+    
+    # If not 200, we have an error.
+    return f"Error: {response.status_code} - {response.text}"
 
 # could have code to call this
